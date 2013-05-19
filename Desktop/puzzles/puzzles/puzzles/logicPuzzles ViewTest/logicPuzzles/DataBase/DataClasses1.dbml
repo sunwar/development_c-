@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="test">
+    <Type Name="test">
+      <Column Name="nid" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="tname" Type="System.String" CanBeNull="false" />
+      <Association Name="test_task" Member="task" ThisKey="nid" OtherKey="ntest" Type="task" />
+    </Type>
+  </Table>
+  <Table Name="" Member="task">
+    <Type Name="task">
+      <Column Name="nid" Type="System.Int32" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ntest" Type="System.Int32" CanBeNull="false" />
+      <Column Name="tname" Type="System.String" CanBeNull="false" />
+      <Column Name="npos" Type="System.Int32" CanBeNull="false" />
+      <Association Name="task_comp" Member="comp" ThisKey="nid" OtherKey="ntask" Type="comp" />
+      <Association Name="task_links" Member="links" ThisKey="nid" OtherKey="ntask" Type="links" />
+      <Association Name="test_task" Member="test" ThisKey="ntest" OtherKey="nid" Type="test" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="comp">
+    <Type Name="comp">
+      <Column Name="ntask" Type="System.Int32" CanBeNull="false" />
+      <Column Name="bkomp" Type="System.Boolean" CanBeNull="false" />
+      <Column Name="tname" Type="System.String" CanBeNull="false" />
+      <Column Name="nid" Type="System.String" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="task_comp" Member="task" ThisKey="ntask" OtherKey="nid" Type="task" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="links">
+    <Type Name="links">
+      <Column Name="ntask" Type="System.Int32" CanBeNull="false" />
+      <Column Name="npic" Type="System.Int32" CanBeNull="false" />
+      <Column Name="tname" Type="System.String" CanBeNull="false" />
+      <Column Name="nid" Type="System.Int32" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="pic_links" Member="pic" ThisKey="npic" OtherKey="nid" Type="pic" IsForeignKey="true" />
+      <Association Name="task_links" Member="task" ThisKey="ntask" OtherKey="nid" Type="task" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="" Member="pic">
+    <Type Name="pic">
+      <Column Name="nid" Type="System.Int32" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="opic" Type="System.Byte[]" CanBeNull="false" />
+      <Association Name="pic_links" Member="links" ThisKey="nid" OtherKey="npic" Type="links" />
+    </Type>
+  </Table>
+</Database>

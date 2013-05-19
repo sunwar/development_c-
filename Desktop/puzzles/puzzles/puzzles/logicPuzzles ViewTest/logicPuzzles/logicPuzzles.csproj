@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A49610F-9BAA-4E1A-94AD-5B159DFA1AAF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>logicPuzzles</RootNamespace>
+    <AssemblyName>logicPuzzles</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="openTaskViewController\OpenTaskViewController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="openTaskViewController\OpenTaskViewController.Designer.cs">
+      <DependentUpon>OpenTaskViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="openTaskViewController\PuzzleBox.cs" />
+    <Compile Include="openTaskViewController\TaskSetup.cs" />
+    <Compile Include="openTestViewController\OpenTestViewController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="openTestViewController\OpenTestViewController.Designer.cs">
+      <DependentUpon>OpenTestViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\DataBaseModel.cs" />
+    <Compile Include="DataBase\DataClasses1.cs">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DataBase\DataClasses1.designer.cs">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="navigationViewController\NavigationViewController.cs" />
+    <Compile Include="presentTaskViewController\MousePosition.cs" />
+    <Compile Include="presentTaskViewController\PresentTaskViewController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentTaskViewController\PresentTaskViewController.Designer.cs">
+      <DependentUpon>PresentTaskViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentTaskViewController\Puzzle.cs" />
+    <Compile Include="presentTestViewController\PresentTestViewController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentTestViewController\PresentTestViewController.Designer.cs">
+      <DependentUpon>PresentTestViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rootViewController\RootViewController .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="rootViewController\RootViewController .Designer.cs">
+      <DependentUpon>RootViewController .cs</DependentUpon>
+    </Compile>
+    <Compile Include="main\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="openTaskViewController\OpenTaskViewController.resx">
+      <DependentUpon>OpenTaskViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataBase\DataClasses1.dbml.layout">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="openTestViewController\OpenTestViewController.resx">
+      <DependentUpon>OpenTestViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentTaskViewController\PresentTaskViewController.resx">
+      <DependentUpon>PresentTaskViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentTestViewController\PresentTestViewController.resx">
+      <DependentUpon>PresentTestViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rootViewController\RootViewController .resx">
+      <DependentUpon>RootViewController .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DataBase\DataClasses1.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DataClasses1.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

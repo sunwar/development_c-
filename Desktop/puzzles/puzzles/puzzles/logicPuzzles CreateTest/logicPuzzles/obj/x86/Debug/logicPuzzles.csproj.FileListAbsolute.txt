@@ -1,0 +1,45 @@
+C:\Users\Катя\Documents\Visual Studio 2008\Projects\logicPuzzles\logicPuzzles\bin\Debug\logicPuzzles.exe
+C:\Users\Катя\Documents\Visual Studio 2008\Projects\logicPuzzles\logicPuzzles\bin\Debug\logicPuzzles.pdb
+C:\Users\Катя\Documents\Visual Studio 2008\Projects\logicPuzzles\logicPuzzles\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Катя\Documents\Visual Studio 2008\Projects\logicPuzzles\logicPuzzles\obj\x86\Debug\logicPuzzles.Properties.Resources.resources
+C:\Users\Катя\Documents\Visual Studio 2008\Projects\logicPuzzles\logicPuzzles\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Катя\Documents\Visual Studio 2008\Projects\logicPuzzles\logicPuzzles\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Катя\Documents\Visual Studio 2008\Projects\logicPuzzles\logicPuzzles\obj\x86\Debug\logicPuzzles.exe
+C:\Users\Катя\Documents\Visual Studio 2008\Projects\logicPuzzles\logicPuzzles\obj\x86\Debug\logicPuzzles.pdb
+C:\Users\Катя\Documents\Visual Studio 2008\Projects\logicPuzzles\logicPuzzles\obj\x86\Debug\logicPuzzles.CreateTaskViewController.resources
+C:\Users\Катя\Documents\Visual Studio 2008\Projects\logicPuzzles\logicPuzzles\obj\x86\Debug\logicPuzzles.RootViewController.resources
+C:\Users\Катя\Documents\Visual Studio 2008\Projects\logicPuzzles\logicPuzzles\obj\x86\Debug\logicPuzzles.CreateTestViewController.resources
+C:\Users\Катя\Documents\Visual Studio 2008\Projects\logicPuzzles\logicPuzzles\obj\x86\Debug\logicPuzzles.PresentTestViewController.resources
+C:\Users\Катя\Documents\Visual Studio 2008\Projects\logicPuzzles\logicPuzzles\obj\x86\Debug\logicPuzzles.PresentTaskViewController.resources
+C:\Users\Катя\Desktop\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.exe
+C:\Users\Катя\Desktop\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.pdb
+C:\Users\Катя\Desktop\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Катя\Desktop\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.CreateTaskViewController.resources
+C:\Users\Катя\Desktop\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.CreateTestViewController.resources
+C:\Users\Катя\Desktop\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.PresentTaskViewController.resources
+C:\Users\Катя\Desktop\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.PresentTestViewController.resources
+C:\Users\Катя\Desktop\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.RootViewController.resources
+C:\Users\Катя\Desktop\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.Properties.Resources.resources
+C:\Users\Катя\Desktop\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Катя\Desktop\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Катя\Desktop\logicPuzzles CreateTest\logicPuzzles\bin\Debug\logicPuzzles.exe
+C:\Users\Катя\Desktop\logicPuzzles CreateTest\logicPuzzles\bin\Debug\logicPuzzles.pdb
+C:\Users\OLEG\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.exe
+C:\Users\OLEG\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.pdb
+C:\Users\Серегин\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.exe
+C:\Users\Серегин\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.pdb
+C:\Users\Серегин\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Серегин\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.CreateTaskViewController.resources
+C:\Users\Серегин\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.CreateTestViewController.resources
+C:\Users\Серегин\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.PresentTaskViewController.resources
+C:\Users\Серегин\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.PresentTestViewController.resources
+C:\Users\Серегин\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.RootViewController.resources
+C:\Users\Серегин\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.Properties.Resources.resources
+C:\Users\Серегин\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Серегин\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Серегин\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\bin\Debug\logicPuzzles.exe
+C:\Users\Серегин\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\bin\Debug\logicPuzzles.pdb
+C:\Users\Катя\Desktop\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.exe
+C:\Users\Катя\Desktop\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.pdb
+C:\Users\Alexei\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.exe
+C:\Users\Alexei\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.pdb
