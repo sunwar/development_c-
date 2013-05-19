@@ -152,7 +152,7 @@ namespace logicPuzzles
 
         public void backChangeController()
         {
-
+            presentChangeTaskController.FindForm().Close();
         }
 
         #endregion

@@ -26,9 +26,14 @@ namespace logicPuzzles
         private task _task;
         private test _test;
         private comp _comp;
-        private pic[] _containerPics;
-        private links[] _containerLinks;
-        private string[] _containerNamePics;
+
+        private List<pic> _containerPics;
+        private List<links> _containerLinks;
+        private List<string> _containerNamePics;
+
+       // private pic[] _containerPics;
+       // private links[] _containerLinks;
+      //  private string[] _containerNamePics;
     
         public static DataBaseModel getInstance()
         {
@@ -38,8 +43,6 @@ namespace logicPuzzles
             }
             return objectBase;
         }
-
-       
 
          private DataBaseModel(string connectString)
         {
@@ -127,7 +130,10 @@ namespace logicPuzzles
 
         public void setNamePics(string[] containerNamePics )
         {
-            _containerNamePics = containerNamePics;
+            for (int i = 0; i < containerNamePics.Length; i++)
+            {
+                _containerNamePics.Add(containerNamePics[i]);
+            }
         }
 
          public void createTest(String testName)
@@ -177,22 +183,31 @@ namespace logicPuzzles
              System.Collections.IEnumerator enumeratorTask = context.task.GetEnumerator();
              System.Collections.IEnumerator enumeratorLinks = context.links.GetEnumerator();
 
-             while (enumeratorTask.MoveNext())
+             try
              {
-                 task curentTask = (task)enumeratorTask.Current;
-                 if (curentTask.test.tname.CompareTo(_test.tname) == 0)
+
+                 while (enumeratorTask.MoveNext())
                  {
-                     while (enumeratorLinks.MoveNext())
+                     task curentTask = (task)enumeratorTask.Current;
+                     if (curentTask.test.tname.CompareTo(_test.tname) == 0)
                      {
-                         links curentLinks = (links)enumeratorLinks.Current;
-                         if (curentLinks.task.tname.CompareTo(curentTask.tname) == 0)
+                         while (enumeratorLinks.MoveNext())
                          {
-                             context.links.DeleteOnSubmit(curentLinks);
+                             links curentLinks = (links)enumeratorLinks.Current;
+                             if (curentLinks.task.tname.CompareTo(curentTask.tname) == 0)
+                             {
+                                 context.links.DeleteOnSubmit(curentLinks);
+                                 context.SubmitChanges();
+                             }
                          }
-                     } 
-                     context.task.DeleteOnSubmit(curentTask);
-                     context.SubmitChanges();
+                         context.task.DeleteOnSubmit(curentTask);
+                         context.SubmitChanges();
+                     }
                  }
+             }
+             catch (Exception)
+             { 
+             
              }
              
          }
@@ -210,6 +225,45 @@ namespace logicPuzzles
                      _test = curentTest;
                  }
              }
+         }
+
+         public void changeTask()
+         {
+             System.Collections.IEnumerator enumeratorLinks = context.links.GetEnumerator();
+             if (_task.test.tname.CompareTo(_test.tname) == 0)
+             {
+                 while (enumeratorLinks.MoveNext())
+                 {
+                     links curentLinks = (links)enumeratorLinks.Current;
+                     if (curentLinks.task.tname.CompareTo(_task.tname) == 0)
+                     {
+                         context.links.DeleteOnSubmit(curentLinks);
+                         context.SubmitChanges();
+                     }
+                 }
+             }
+
+             for (int i = 0; i < _containerPics.Count; i++)
+             {
+                 _containerPics.ToArray()[i].nid = getPicId() + i;
+                 _containerLinks.ToArray()[i].npic = _containerPics[i].nid;
+                 _containerLinks.ToArray()[i].tname = _containerNamePics[i];
+                 _containerLinks.ToArray()[i].nid = getLinkId() + i;
+                 _containerLinks.ToArray()[i].ntask = _task.nid;
+             }
+
+             for (int i = 0; i < _containerPics.Count; i++)
+             {
+                 context.pic.InsertOnSubmit(_containerPics.ToArray()[i]);
+                 context.SubmitChanges();
+             }
+
+             for (int i = 0; i < _containerPics.Count; i++)
+             {
+                 context.links.InsertOnSubmit(_containerLinks.ToArray()[i]);
+                 context.SubmitChanges();
+             }
+         
          }
 
          public void openTaskChange(string taskName)
@@ -236,22 +290,19 @@ namespace logicPuzzles
              initContainers(listLinks.Count / 2);
          }
 
-         public void changeTest(String testName)
-         { 
-         
-         }
-
          public void initContainers(int countObject)
          {
-             _containerLinks = new links[countObject];
-             _containerPics = new pic[countObject];
+             _containerLinks = new List<links>(countObject);
+             _containerPics = new List<pic>(countObject);
+             _containerNamePics = new List<string>(countObject);
              for (int i = 0; i < countObject; i++)
              {
-                 _containerLinks[i] = new links();
-                 _containerPics[i] = new pic();
+                 _containerLinks.Add (new links());
+                 _containerPics.Add( new pic());
              }
          }
 
+        
          public void createTask(int countObject, string nameTask)
          {
              initContainers(countObject);
@@ -259,43 +310,52 @@ namespace logicPuzzles
              _task.ntest = _test.nid;
              _task.tname = nameTask;
              _task.nid = getTaskId();
+              context.task.InsertOnSubmit(_task);
          }
 
          public void loadPic(string path, int indexPic)
          {
              //Bitmap curentPic = new Bitmap(path);
              byte[] bytes = System.IO.File.ReadAllBytes(path);
-             _containerPics[indexPic - 1].opic = bytes;
+             _containerPics.ToArray()[indexPic].opic = bytes;
+         }
+
+         public void loadPicturesBox(PictureBox pic, int indexPic)
+         {
+            Bitmap bitmap = new Bitmap(pic.Image);
+            System.IO.MemoryStream memoryStream = new System.IO.MemoryStream();
+            pic.Image.Save(memoryStream, System.Drawing.Imaging.ImageFormat.Png);
+            byte[] arrayBytesPic = memoryStream.ToArray();
+             if(indexPic<=_containerPics.Count)
+            _containerPics.ToArray()[indexPic].opic = arrayBytesPic; 
          }
 
          public void linksPic()
          {
-             for (int i = 0; i < _containerPics.Length; i++)
+             for (int i = 0; i < _containerPics.Count; i++)
              {
-                 _containerPics[i].nid = getPicId() + i;
-                 _containerLinks[i].npic = _containerPics[i].nid;
-                 _containerLinks[i].tname = _containerNamePics[i];
-                 _containerLinks[i].nid = getLinkId() + i;
-                 _containerLinks[i].ntask = _task.nid;
+                 _containerPics.ToArray()[i].nid = getPicId() + i;
+                 _containerLinks.ToArray()[i].npic = _containerPics[i].nid;
+                 _containerLinks.ToArray()[i].tname = _containerNamePics[i];
+                 _containerLinks.ToArray()[i].nid = getLinkId() + i;
+                 _containerLinks.ToArray()[i].ntask = _task.nid;
              }
          }
 
          public void saveTask()
          {
              try
-             {
-                 
-                 context.task.InsertOnSubmit(_task);
+             {      
                  context.SubmitChanges();
-                 for (int i = 0; i < _containerPics.Length; i++)
+                 for (int i = 0; i < _containerPics.Count; i++)
                  {
-                     context.pic.InsertOnSubmit(_containerPics[i]);
+                     context.pic.InsertOnSubmit(_containerPics.ToArray()[i]);
                      context.SubmitChanges();
                  }
 
-                 for (int i = 0; i < _containerPics.Length; i++)
+                 for (int i = 0; i < _containerPics.Count; i++)
                  {
-                     context.links.InsertOnSubmit(_containerLinks[i]);
+                     context.links.InsertOnSubmit(_containerLinks.ToArray()[i]);
                      context.SubmitChanges();
                  }
                  
