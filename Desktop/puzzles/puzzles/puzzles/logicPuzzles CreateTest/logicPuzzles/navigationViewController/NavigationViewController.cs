@@ -48,8 +48,8 @@ namespace logicPuzzles
 
         public void showPresentTaskController(TaskSetup taskSetup)
         {
+            presentTaskViewController = new PresentTaskViewController(this);
             presentTaskViewController.setupTask(taskSetup);
-            closeForm(createTaskViewController.FindForm());
             presentTaskViewController.FindForm().Text = taskSetup.nameTask;
             presentTaskViewController.ShowDialog();
         }
@@ -60,7 +60,7 @@ namespace logicPuzzles
 
         void CreateTestDelegate.showPresentTestController(string nameTest)
         {
-            closeForm(createTestViewController.FindForm());
+            presentTestViewController = new PresentTestViewController(this);
             presentTestViewController.FindForm().Text = nameTest;
             presentTestViewController.ShowDialog();
         }
@@ -76,7 +76,7 @@ namespace logicPuzzles
 
         public void bachController(PresentTaskViewController presentController)
         {
-            closeForm(presentController.FindForm());
+            
         }
 
         #endregion
@@ -85,7 +85,7 @@ namespace logicPuzzles
 
         public void showCreateTask()
         {
-            closeForm(presentTestViewController.FindForm());
+            createTaskViewController = new CreateTaskViewController(this);
             createTaskViewController.ShowDialog(); 
         }
 
@@ -95,6 +95,7 @@ namespace logicPuzzles
 
         public void showCreateController()
         {
+            createTestViewController = new CreateTestViewController(this);
             createTestViewController.ShowDialog();
         }
 
@@ -102,11 +103,7 @@ namespace logicPuzzles
 
         #region - Utils
 
-        private void closeForm(Form form)
-        {
-            form.Visible = false;
-            form.Close();
-        }
+  
 
         #endregion
 

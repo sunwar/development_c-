@@ -43,3 +43,16 @@ C:\Users\Катя\Desktop\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\D
 C:\Users\Катя\Desktop\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.pdb
 C:\Users\Alexei\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.exe
 C:\Users\Alexei\Desktop\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.pdb
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.exe
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.pdb
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\bin\Debug\logicPuzzles.exe
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\bin\Debug\logicPuzzles.pdb
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.CreateTaskViewController.resources
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.CreateTestViewController.resources
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.PresentTaskViewController.resources
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.PresentTestViewController.resources
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.RootViewController.resources
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.Properties.Resources.resources
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\GenerateResource.write.1.tlog
