@@ -68,6 +68,7 @@
             this.загрузитьТестToolStripMenuItem.Name = "загрузитьТестToolStripMenuItem";
             this.загрузитьТестToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.загрузитьТестToolStripMenuItem.Text = "&Редактировать тест";
+            this.загрузитьТестToolStripMenuItem.Click += new System.EventHandler(this.загрузитьТестToolStripMenuItem_Click);
             // 
             // выходИзПрограммыToolStripMenuItem
             // 

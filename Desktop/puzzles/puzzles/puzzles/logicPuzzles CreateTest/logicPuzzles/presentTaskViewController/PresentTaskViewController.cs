@@ -12,7 +12,7 @@ namespace logicPuzzles
     public  interface PresentTaskDelegate
     {
         void showPresentTask();
-        void bachController(PresentTaskViewController presentController);
+        void bachController();
     }
 
     public partial class PresentTaskViewController : Form
@@ -126,7 +126,7 @@ namespace logicPuzzles
             dataBase.setNamePics(listName.ToArray());
             dataBase.linksPic();
             dataBase.saveTask();
-            presentTaskDelegate.bachController(this);
+            presentTaskDelegate.bachController();
         }
 
         #endregion

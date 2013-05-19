@@ -56,3 +56,5 @@ C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuz
 C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.Properties.Resources.resources
 C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.ChangeTestViewController.resources
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.ChangeTaskViewController.resources

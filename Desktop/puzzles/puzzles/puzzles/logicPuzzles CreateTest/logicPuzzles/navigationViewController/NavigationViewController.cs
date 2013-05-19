@@ -13,12 +13,16 @@ namespace logicPuzzles
                                      CreateTestDelegate, 
                                      PresentTaskDelegate,
                                      PresentTestDelegate,
+                                     ChangeTestDelegate,
+                                     ChangeTaskDekegate,
                                      RootControllerDelegate
     {
-        CreateTestViewController createTestViewController;
-        CreateTaskViewController createTaskViewController;
-        PresentTaskViewController presentTaskViewController;
-        PresentTestViewController presentTestViewController;
+        CreateTestViewController    createTestViewController;
+        CreateTaskViewController    createTaskViewController;
+        PresentTaskViewController   presentTaskViewController;
+        PresentTestViewController   presentTestViewController;
+        ChangeTestViewController    changeTestViewContrroller;
+        ChangeTaskViewController    changeTaskViewController;
     
         private NavigationViewController()
         {
@@ -30,24 +34,16 @@ namespace logicPuzzles
             if (navigationController == null)
             {
                 navigationController = new NavigationViewController();
-                navigationController.init();
             }
             return navigationController;
         }
 
-        private void init()
-        {
-            createTaskViewController = new CreateTaskViewController(navigationController);
-            createTestViewController = new CreateTestViewController(navigationController);
-            presentTaskViewController = new PresentTaskViewController(navigationController);
-            presentTestViewController = new PresentTestViewController(navigationController);
-        }
-
-
+       
         #region  CreateTaskDelegate
 
         public void showPresentTaskController(TaskSetup taskSetup)
         {
+            createTestViewController.FindForm().Close();
             presentTaskViewController = new PresentTaskViewController(this);
             presentTaskViewController.setupTask(taskSetup);
             presentTaskViewController.FindForm().Text = taskSetup.nameTask;
@@ -74,9 +70,10 @@ namespace logicPuzzles
             
         }
 
-        public void bachController(PresentTaskViewController presentController)
+        public void bachController()
         {
-            
+            presentTaskViewController.FindForm().Close();
+            createTaskViewController.FindForm().Close();
         }
 
         #endregion
@@ -89,6 +86,13 @@ namespace logicPuzzles
             createTaskViewController.ShowDialog(); 
         }
 
+        public void showChangeTask(string nameTest)
+        {
+            changeTaskViewController = new ChangeTaskViewController(this);
+            changeTaskViewController.selectTask(nameTest);
+            changeTaskViewController.ShowDialog();
+        }
+
         #endregion
 
         #region  RootControllerDelegate
@@ -99,16 +103,45 @@ namespace logicPuzzles
             createTestViewController.ShowDialog();
         }
 
+        public void showChangeTestController()
+        {
+            changeTestViewContrroller = new ChangeTestViewController(this);
+            changeTestViewContrroller.openTest();
+            changeTestViewContrroller.ShowDialog();
+        }
+
+        #endregion
+
+        #region ChangeTestDelegate
+
+        void ChangeTestDelegate.showPresentTestController(string testName)
+        {
+            presentTestViewController = new PresentTestViewController(this);
+            presentTestViewController.NameTest = testName;
+            presentTestViewController.FindForm().Text = testName;
+            presentTestViewController.ShowDialog();
+        }
+        
+        #endregion
+
+
+        #region - ChangeTaskDelegate
+
+        public void showPresentTaskController()
+        {
+            
+        }
+
         #endregion
 
         #region - Utils
 
-  
+
 
         #endregion
 
 
 
-      
+       
     }
 }

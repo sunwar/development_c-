@@ -16,7 +16,7 @@ namespace logicPuzzles
 {
     class DataBaseModel
     {
-        private string _connectString;
+        public static string _connectString;
         private OleDbConnection connection;
         private static DataBaseModel objectBase;
         private DataClasses1DataContext context;

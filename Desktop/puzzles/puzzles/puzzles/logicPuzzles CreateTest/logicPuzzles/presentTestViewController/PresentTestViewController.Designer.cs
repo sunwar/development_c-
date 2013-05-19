@@ -75,6 +75,7 @@
             this.открытьЗаданиеToolStripMenuItem.Name = "открытьЗаданиеToolStripMenuItem";
             this.открытьЗаданиеToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.открытьЗаданиеToolStripMenuItem.Text = "&Редактировать задание";
+            this.открытьЗаданиеToolStripMenuItem.Click += new System.EventHandler(this.открытьЗаданиеToolStripMenuItem_Click);
             // 
             // выходИхТестаToolStripMenuItem
             // 

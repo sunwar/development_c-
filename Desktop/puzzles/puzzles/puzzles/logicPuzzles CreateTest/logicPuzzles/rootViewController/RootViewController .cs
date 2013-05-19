@@ -16,6 +16,7 @@ namespace logicPuzzles
    public interface RootControllerDelegate
     {
         void showCreateController();
+        void showChangeTestController();
     }
 
     struct itemTask
@@ -43,6 +44,8 @@ namespace logicPuzzles
     public partial class RootViewController : Form
     {
         private RootControllerDelegate rootDelegate;
+        private DataBaseModel dataBase; 
+
         public RootViewController(RootControllerDelegate _rootDelegate)
         {
             InitializeComponent();
@@ -52,6 +55,17 @@ namespace logicPuzzles
         private void создатьТестToolStripMenuItem_Click(object sender, EventArgs e)
         {
             rootDelegate.showCreateController();
+        }
+
+        private void загрузитьТестToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            if (fileDialog.ShowDialog() == DialogResult.OK)
+            {
+                DataBaseModel._connectString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + fileDialog.FileName;
+                dataBase = DataBaseModel.getInstance();
+                rootDelegate.showChangeTestController();
+            }
         }
 
     }

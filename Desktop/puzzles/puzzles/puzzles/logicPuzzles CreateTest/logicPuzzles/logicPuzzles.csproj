@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="changeTaskViewController\ChangeTaskViewController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeTaskViewController\ChangeTaskViewController.Designer.cs">
+      <DependentUpon>ChangeTaskViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="changeTestViewController\ChangeTestViewController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="changeTestViewController\ChangeTestViewController.Designer.cs">
+      <DependentUpon>ChangeTestViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="createTaskViewController\CreateTaskViewController.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +103,12 @@
     </Compile>
     <Compile Include="main\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="changeTaskViewController\ChangeTaskViewController.resx">
+      <DependentUpon>ChangeTaskViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="changeTestViewController\changeTestViewController.resx">
+      <DependentUpon>ChangeTestViewController.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="createTaskViewController\CreateTaskViewController.resx">
       <DependentUpon>CreateTaskViewController.cs</DependentUpon>
     </EmbeddedResource>
