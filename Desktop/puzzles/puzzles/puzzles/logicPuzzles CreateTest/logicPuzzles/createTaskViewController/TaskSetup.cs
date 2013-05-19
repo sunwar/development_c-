@@ -17,5 +17,6 @@ namespace logicPuzzles
         public string nameTask;
         public wraper wraperControl;
         public int counPage;
+        public List<PuzzleBox> listPuzzleBox;
     }
 }

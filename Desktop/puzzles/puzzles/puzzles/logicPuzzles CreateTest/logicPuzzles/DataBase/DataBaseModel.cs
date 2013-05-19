@@ -135,6 +135,110 @@ namespace logicPuzzles
              _test = new test();
              _test.tname = testName;
              _test.nid = getTestId();
+              context.test.InsertOnSubmit(_test);
+         }
+
+         public void deleteTest(string testName)
+         {
+             System.Collections.IEnumerator enumeratorTest = context.test.GetEnumerator();
+             System.Collections.IEnumerator enumeratorTask = context.task.GetEnumerator();
+             System.Collections.IEnumerator enumeratorLinks = context.links.GetEnumerator();
+            
+             while (enumeratorTask.MoveNext())
+             {
+                 task curentTask = (task)enumeratorTask.Current;
+                 if (curentTask.test.tname.CompareTo(testName) == 0)
+                 {
+                     while (enumeratorLinks.MoveNext())
+                     {
+                         links curentLinks = (links)enumeratorLinks.Current;
+                         if (curentLinks.task.tname.CompareTo(curentTask.tname) == 0)
+                         {
+                             context.links.DeleteOnSubmit(curentLinks);
+                         }
+                     }
+                     context.task.DeleteOnSubmit(curentTask);
+                 }
+             }
+
+             while (enumeratorTest.MoveNext())
+             {
+                 test curentTest = (test)enumeratorTest.Current;
+                  if (curentTest.tname.CompareTo(testName) == 0)
+                  {
+                      context.test.DeleteOnSubmit(curentTest);
+                  }
+             }
+             context.SubmitChanges();
+         }
+
+         public void deleteTask(string nameTask, string nameTest)
+         {
+             System.Collections.IEnumerator enumeratorTask = context.task.GetEnumerator();
+             System.Collections.IEnumerator enumeratorLinks = context.links.GetEnumerator();
+
+             while (enumeratorTask.MoveNext())
+             {
+                 task curentTask = (task)enumeratorTask.Current;
+                 if (curentTask.test.tname.CompareTo(_test.tname) == 0)
+                 {
+                     while (enumeratorLinks.MoveNext())
+                     {
+                         links curentLinks = (links)enumeratorLinks.Current;
+                         if (curentLinks.task.tname.CompareTo(curentTask.tname) == 0)
+                         {
+                             context.links.DeleteOnSubmit(curentLinks);
+                         }
+                     } 
+                     context.task.DeleteOnSubmit(curentTask);
+                     context.SubmitChanges();
+                 }
+             }
+             
+         }
+
+         public void openTestChange(string testName)
+         {
+             System.Collections.IEnumerator enumeratorTest = context.test.GetEnumerator();
+             
+             
+             while (enumeratorTest.MoveNext())
+             {
+                 test curentTest = (test)enumeratorTest.Current;
+                 if (curentTest.tname.CompareTo(testName) == 0)
+                 {
+                     _test = curentTest;
+                 }
+             }
+         }
+
+         public void openTaskChange(string taskName)
+         {
+             System.Collections.IEnumerator enumeratorTask = context.task.GetEnumerator();
+             System.Collections.IEnumerator enumeratorLinks = context.links.GetEnumerator();
+             List<links> listLinks = new List<links>();
+             while (enumeratorTask.MoveNext())
+             {
+                 task curentTask = (task)enumeratorTask.Current;
+                 if (curentTask.tname.CompareTo(taskName) == 0)
+                 {
+                     _task = curentTask;
+                     while (enumeratorLinks.MoveNext())
+                     {
+                         links curentLinks = (links)enumeratorLinks.Current;
+                         if (curentLinks.task.tname.CompareTo(curentTask.tname) == 0)
+                         {
+                             listLinks.Add(curentLinks);
+                         }
+                     }
+                 }
+             }
+             initContainers(listLinks.Count / 2);
+         }
+
+         public void changeTest(String testName)
+         { 
+         
          }
 
          public void initContainers(int countObject)
@@ -178,21 +282,30 @@ namespace logicPuzzles
 
          public void saveTask()
          {
-             context.test.InsertOnSubmit(_test);
-             context.task.InsertOnSubmit(_task);
-             context.SubmitChanges();
-             for (int i = 0; i < _containerPics.Length; i++)
+             try
              {
-                 context.pic.InsertOnSubmit(_containerPics[i]);
+                 
+                 context.task.InsertOnSubmit(_task);
                  context.SubmitChanges();
-             }
+                 for (int i = 0; i < _containerPics.Length; i++)
+                 {
+                     context.pic.InsertOnSubmit(_containerPics[i]);
+                     context.SubmitChanges();
+                 }
 
-             for (int i = 0; i < _containerPics.Length; i++)
+                 for (int i = 0; i < _containerPics.Length; i++)
+                 {
+                     context.links.InsertOnSubmit(_containerLinks[i]);
+                     context.SubmitChanges();
+                 }
+                 
+             }
+             catch (Exception)
              {
-                 context.links.InsertOnSubmit(_containerLinks[i]);
-                 context.SubmitChanges();
-             } 
+                
+             }
          }
+
        
     }
 }

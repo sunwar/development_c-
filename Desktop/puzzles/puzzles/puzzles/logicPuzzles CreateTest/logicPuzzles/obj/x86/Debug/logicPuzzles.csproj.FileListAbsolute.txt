@@ -50,7 +50,6 @@ C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuz
 C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.CreateTaskViewController.resources
 C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.CreateTestViewController.resources
-C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.PresentTaskViewController.resources
 C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.PresentTestViewController.resources
 C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.RootViewController.resources
 C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.Properties.Resources.resources
@@ -58,3 +57,5 @@ C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuz
 C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.ChangeTestViewController.resources
 C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.ChangeTaskViewController.resources
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.PresentNewTaskViewController.resources
+C:\Users\Alexei\Desktop\puzzles\puzzles\puzzles\logicPuzzles CreateTest\logicPuzzles\obj\x86\Debug\logicPuzzles.PresentChangeTaskViewController.resources

@@ -53,6 +53,7 @@
     <Compile Include="changeTaskViewController\ChangeTaskViewController.Designer.cs">
       <DependentUpon>ChangeTaskViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="changeTaskViewController\PuzzleBox.cs" />
     <Compile Include="changeTestViewController\ChangeTestViewController.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,13 +83,19 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="navigationViewController\NavigationViewController.cs" />
-    <Compile Include="presentTaskViewController\PresentTaskViewController.cs">
+    <Compile Include="presentChangeTaskViewController\PresentChangeTaskViewController.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="presentTaskViewController\PresentTaskViewController.Designer.cs">
-      <DependentUpon>PresentTaskViewController.cs</DependentUpon>
+    <Compile Include="presentChangeTaskViewController\PresentChangeTaskViewController.Designer.cs">
+      <DependentUpon>PresentChangeTaskViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="presentTaskViewController\Puzzle.cs" />
+    <Compile Include="presentNewTaskViewController\PresentNewTaskViewController.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presentNewTaskViewController\PresentNewTaskViewController.Designer.cs">
+      <DependentUpon>PresentNewTaskViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="presentNewTaskViewController\Puzzle.cs" />
     <Compile Include="presentTestViewController\PresentTestViewController.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,8 +125,11 @@
     <EmbeddedResource Include="createTestViewController\CreateTestViewController.resx">
       <DependentUpon>CreateTestViewController.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="presentTaskViewController\PresentTaskViewController.resx">
-      <DependentUpon>PresentTaskViewController.cs</DependentUpon>
+    <EmbeddedResource Include="presentChangeTaskViewController\PresentChangeTaskViewController.resx">
+      <DependentUpon>PresentChangeTaskViewController.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presentNewTaskViewController\PresentNewTaskViewController.resx">
+      <DependentUpon>PresentNewTaskViewController.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presentTestViewController\PresentTestViewController.resx">
       <DependentUpon>PresentTestViewController.cs</DependentUpon>

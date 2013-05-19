@@ -32,12 +32,27 @@ namespace logicPuzzles
             InitializeComponent();
         }
 
-        private void создатьЗаданиеToolStripMenuItem_Click(object sender, EventArgs e)
+        public void setupTask(bool changeTask)
+        {
+            if (changeTask)
+            {
+                changeTaskButton.Visible = true;
+                createTaskButton.Visible = false;
+            }
+            else
+            {
+                changeTaskButton.Visible = false;
+                createTaskButton.Visible = true;
+            }
+        }
+
+
+        private void createTaskButton_Click(object sender, EventArgs e)
         {
             presentTestDelegate.showCreateTask();
         }
 
-        private void открытьЗаданиеToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ChangeTaskButton_Click(object sender, EventArgs e)
         {
             presentTestDelegate.showChangeTask(NameTest);
         }
